@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motoristas - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="header-content">
+                <h1>Motoristas</h1>
+                <div class="header-stats">
+                    <div class="stat-card">
+                        <span class="stat-value">42</span>
+                        <span class="stat-label">Motoristas Ativos</span>
+                    </div>
+                    <div class="stat-card warning">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">CNH a Vencer</span>
+                    </div>
+                </div>
+            </div>
+            <a href="novo.html" class="btn-primary">Novo Motorista</a>
+        </header>
+
+        <div class="filters-section">
+            <div class="search-group">
+                <div class="search-box">
+                    <i class="icon-search"></i>
+                    <input 
+                        type="text" 
+                        placeholder="Buscar por nome..."
+                        class="search-input"
+                    >
+                </div>
+                <div class="search-box">
+                    <i class="icon-document"></i>
+                    <input 
+                        type="text" 
+                        placeholder="Buscar por documento..."
+                        class="search-input"
+                    >
+                </div>
+                <div class="search-box">
+                    <i class="icon-truck"></i>
+                    <input 
+                        type="text" 
+                        placeholder="Buscar por tipo de carga..."
+                        class="search-input"
+                    >
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="status">Status:</label>
+                    <select id="status" class="filter-select">
+                        <option value="ativo" selected>Ativos</option>
+                        <option value="inativo">Inativos</option>
+                        <option value="todos">Todos</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="drivers-grid">
+            <div class="driver-card">
+                <div class="driver-header">
+                    <img src="../../assets/profile-placeholder.jpg" alt="Foto do Motorista" class="driver-photo">
+                    <div class="driver-status active">Ativo</div>
+                </div>
+                <div class="driver-info">
+                    <h3 class="driver-name">João Silva</h3>
+                    <div class="info-row">
+                        <i class="icon-id"></i>
+                        <span>BI: 123456789</span>
+                    </div>
+                    <div class="info-row">
+                        <i class="icon-license"></i>
+                        <span>Categoria D</span>
+                    </div>
+                    <div class="info-row">
+                        <i class="icon-truck"></i>
+                        <span>Combustível Líquido</span>
+                    </div>
+                </div>
+                <div class="license-alert warning">
+                    <i class="icon-warning"></i>
+                    <span>CNH vence em 30 dias</span>
+                </div>
+                <div class="driver-actions">
+                    <a href="visualizar.html" class="btn-icon" title="Visualizar">
+                        <i class="icon-eye"></i>
+                    </a>
+                    <a href="editar.html" class="btn-icon" title="Editar">
+                        <i class="icon-edit"></i>
+                    </a>
+                    <button class="btn-icon" title="Excluir">
+                        <i class="icon-trash"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mais cards de motoristas... -->
+        </div>
+
+        <div class="pagination">
+            <button class="btn-page" disabled>&laquo; Anterior</button>
+            <div class="page-numbers">
+                <button class="btn-page active">1</button>
+                <button class="btn-page">2</button>
+                <button class="btn-page">3</button>
+            </div>
+            <button class="btn-page">Próxima &raquo;</button>
+        </div>
+    </div>
+</body>
+</html>

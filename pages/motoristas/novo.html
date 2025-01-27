@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Motorista - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <h1>Novo Motorista</h1>
+            <a href="index.html" class="btn-secondary">Voltar</a>
+        </header>
+
+        <div class="form-container">
+            <div class="form-tabs">
+                <button class="tab-button active">
+                    <i class="icon-user"></i>
+                    Dados Cadastrais
+                </button>
+                <button class="tab-button">
+                    <i class="icon-briefcase"></i>
+                    Dados Profissionais
+                </button>
+                <button class="tab-button">
+                    <i class="icon-bank"></i>
+                    Dados Bancários
+                </button>
+                <button class="tab-button">
+                    <i class="icon-info"></i>
+                    Outras Informações
+                </button>
+            </div>
+
+            <form class="tabbed-form">
+                <!-- Aba: Dados Cadastrais -->
+                <div class="tab-content active">
+                    <div class="profile-section">
+                        <div class="profile-photo">
+                            <img src="../../assets/profile-placeholder.jpg" alt="Foto do Motorista">
+                            <button type="button" class="btn-upload">
+                                <i class="icon-camera"></i>
+                                Alterar Foto
+                            </button>
+                        </div>
+
+                        <div class="form-row two-columns">
+                            <div class="form-group">
+                                <label for="status">Status*</label>
+                                <select id="status" required>
+                                    <option value="ativo" selected>Ativo</option>
+                                    <option value="inativo">Inativo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="nome">Nome Completo*</label>
+                                <input type="text" id="nome" required>
+                            </div>
+                        </div>
+
+                        <div class="document-section">
+                            <h3>Documentação</h3>
+                            <div class="form-row three-columns">
+                                <div class="form-group">
+                                    <label for="categoria">Categoria Habilitação*</label>
+                                    <select id="categoria" required>
+                                        <option value="">Selecione</option>
+                                        <option value="A">A</option>
+                                        <option value="B">B</option>
+                                        <option value="C">C</option>
+                                        <option value="D">D</option>
+                                        <option value="E">E</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="numero-hab">Número Habilitação*</label>
+                                    <input type="text" id="numero-hab" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="validade">Data de Validade*</label>
+                                    <input type="date" id="validade" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row two-columns">
+                            <div class="form-group">
+                                <label for="documento">Documento Identificação (BI)*</label>
+                                <input type="text" id="documento" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nascimento">Data de Nascimento</label>
+                                <input type="date" id="nascimento">
+                            </div>
+                        </div>
+
+                        <div class="form-row two-columns">
+                            <div class="form-group">
+                                <label for="estado-civil">Estado Civil</label>
+                                <select id="estado-civil">
+                                    <option value="">Selecione</option>
+                                    <option value="solteiro">Solteiro(a)</option>
+                                    <option value="casado">Casado(a)</option>
+                                    <option value="divorciado">Divorciado(a)</option>
+                                    <option value="viuvo">Viúvo(a)</option>
+                                    <option value="separado">Separado(a)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="telefone">Telefone</label>
+                                <input type="tel" id="telefone">
+                            </div>
+                        </div>
+
+                        <div class="address-section">
+                            <h3>Endereço</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="rua">Rua</label>
+                                    <input type="text" id="rua">
+                                </div>
+                            </div>
+                            <div class="form-row three-columns">
+                                <div class="form-group">
+                                    <label for="numero">Número</label>
+                                    <input type="text" id="numero">
+                                </div>
+                                <div class="form-group">
+                                    <label for="complemento">Complemento</label>
+                                    <input type="text" id="complemento">
+                                </div>
+                                <div class="form-group">
+                                    <label for="bairro">Bairro</label>
+                                    <input type="text" id="bairro">
+                                </div>
+                            </div>
+                            <div class="form-row three-columns">
+                                <div class="form-group">
+                                    <label for="municipio">Município</label>
+                                    <input type="text" id="municipio">
+                                </div>
+                                <div class="form-group">
+                                    <label for="provincia">Província</label>
+                                    <input type="text" id="provincia">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pais">País</label>
+                                    <input type="text" id="pais" value="Angola">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="access-section">
+                            <h3>Acesso ao Sistema</h3>
+                            <div class="form-row two-columns">
+                                <div class="form-group">
+                                    <label for="email">E-mail*</label>
+                                    <input type="email" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="senha">Senha*</label>
+                                    <div class="password-group">
+                                        <input type="password" id="senha" required>
+                                        <button type="button" class="btn-secondary">
+                                            Gerar Senha
+                                        </button>
+                                    </div>
+                                    <small>Mínimo 4 dígitos, letras, números e caractere especial</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Continua com as outras abas... Quer que eu desenvolva as outras também? -->
+                 <!-- Aba: Dados Profissionais -->
+<div class="tab-content">
+    <div class="profile-section">
+        <div class="form-row two-columns">
+            <div class="form-group">
+                <label for="cargo">Cargo*</label>
+                <select id="cargo" required>
+                    <option value="">Selecione o cargo</option>
+                    <option value="motorista">Motorista</option>
+                    <option value="motorista-senior">Motorista Sênior</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tipo-carga">Tipo de Carga*</label>
+                <select id="tipo-carga" required multiple>
+                    <option value="combustivel">Combustível</option>
+                    <option value="inflamavel">Inflamável</option>
+                    <option value="perigosa">Carga Perigosa</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row two-columns">
+            <div class="form-group">
+                <label for="data-inicio">Data de Início</label>
+                <input type="date" id="data-inicio">
+            </div>
+            <div class="form-group">
+                <label for="experiencia">Tempo de Experiência</label>
+                <div class="experience-group">
+                    <input type="number" id="experiencia">
+                    <select id="experiencia-tipo">
+                        <option value="meses">Meses</option>
+                        <option value="anos">Anos</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="previous-companies">
+            <h3>Histórico de Empresas</h3>
+            <div class="company-list">
+                <div class="company-item">
+                    <div class="form-row three-columns">
+                        <div class="form-group">
+                            <label>Empresa</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Período</label>
+                            <div class="date-range">
+                                <input type="date">
+                                <span>até</span>
+                                <input type="date">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Cargo</label>
+                            <input type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn-add-company">
+                <i class="icon-plus"></i>
+                Adicionar Empresa
+            </button>
+        </div>
+
+        <div class="work-schedule">
+            <h3>Jornada de Trabalho</h3>
+            <div class="form-row three-columns">
+                <div class="form-group">
+                    <label for="horario-inicio">Horário Inicial</label>
+                    <input type="time" id="horario-inicio">
+                </div>
+                <div class="form-group">
+                    <label for="horario-fim">Horário Final</label>
+                    <input type="time" id="horario-fim">
+                </div>
+                <div class="form-group">
+                    <label for="intervalo">Intervalo</label>
+                    <input type="time" id="intervalo">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Aba: Dados Bancários -->
+<div class="tab-content">
+    <div class="profile-section">
+        <div class="bank-info-card">
+            <div class="form-row two-columns">
+                <div class="form-group">
+                    <label for="codigo-banco">Código do Banco</label>
+                    <input type="text" id="codigo-banco" placeholder="Ex: 123">
+                </div>
+                <div class="form-group">
+                    <label for="nome-banco">Nome do Banco</label>
+                    <input type="text" id="nome-banco" placeholder="Ex: Banco de Angola">
+                </div>
+            </div>
+
+            <div class="form-row two-columns">
+                <div class="form-group">
+                    <label for="agencia">Agência</label>
+                    <input type="text" id="agencia" placeholder="Ex: 0001">
+                </div>
+                <div class="form-group">
+                    <label for="conta">Número da Conta</label>
+                    <input type="text" id="conta" placeholder="Ex: 12345-6">
+                </div>
+            </div>
+
+            <div class="form-row two-columns">
+                <div class="form-group">
+                    <label for="swift">SWIFT</label>
+                    <input type="text" id="swift" placeholder="Ex: BRDAOLUA">
+                    <small>Código de identificação do banco para transferências internacionais</small>
+                </div>
+                <div class="form-group">
+                    <label for="iban">IBAN</label>
+                    <input type="text" id="iban" placeholder="Ex: AO06000600000100037131174">
+                    <small>Número de conta bancária internacional</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
