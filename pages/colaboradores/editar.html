@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Colaborador - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <h1>Editar Colaborador</h1>
+            <div class="header-actions">
+                <a href="visualizar.html" class="btn-secondary">Cancelar</a>
+            </div>
+        </header>
+
+        <form class="form-container">
+            <div class="form-section">
+                <h2>Status do Colaborador</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="status">Status*</label>
+                        <select id="status" required>
+                            <option value="ativo" selected>Ativo</option>
+                            <option value="inativo">Inativo</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Informações Pessoais</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome Completo*</label>
+                        <input type="text" id="nome" value="João Silva" required>
+                    </div>
+                </div>
+
+                <div class="form-row two-columns">
+                    <div class="form-group">
+                        <label for="telefone">Telefone*</label>
+                        <input type="tel" id="telefone" value="+244 923 456 789" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail*</label>
+                        <input type="email" id="email" value="joao.silva@empresa.com" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Informações de Acesso</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cargo">Cargo*</label>
+                        <select id="cargo" required>
+                            <option value="motorista" selected>Motorista</option>
+                            <option value="supervisor">Supervisor</option>
+                            <option value="gerente">Gerente</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nivel-acesso">Nível de Acesso*</label>
+                        <select id="nivel-acesso" required>
+                            <option value="basico" selected>Básico</option>
+                            <option value="intermediario">Intermediário</option>
+                            <option value="admin">Administrador</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <button type="button" class="btn-secondary">
+                            Redefinir Senha
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Observações</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <textarea id="observacoes" rows="4">Motorista principal da rota norte. Certificado em transporte de cargas perigosas.</textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Salvar Alterações</button>
+                <a href="visualizar.html" class="btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
