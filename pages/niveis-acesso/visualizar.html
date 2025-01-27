@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Nível de Acesso - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="header-title">
+                <h1>Nível de Acesso: Operacional</h1>
+                <span class="status-badge active">Ativo</span>
+            </div>
+            <div class="header-actions">
+                <a href="editar.html" class="btn-primary">Editar</a>
+                <a href="index.html" class="btn-secondary">Voltar</a>
+            </div>
+        </header>
+
+        <div class="view-container">
+            <section class="view-section">
+                <h2>Informações Básicas</h2>
+                <div class="info-group">
+                    <div class="info-item">
+                        <span class="info-label">ID:</span>
+                        <span class="info-value">002</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Nome:</span>
+                        <span class="info-value">Operacional</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Status:</span>
+                        <span class="info-value">Ativo</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="view-section">
+                <h2>Permissões do Sistema</h2>
+                
+                <div class="permission-view-group">
+                    <h3>Gestão de Usuários</h3>
+                    <div class="module-permissions">
+                        <h4>Colaboradores</h4>
+                        <ul class="permission-list">
+                            <li class="permission-granted">Visualizar</li>
+                            <li class="permission-granted">Adicionar</li>
+                            <li class="permission-denied">Editar</li>
+                            <li class="permission-denied">Remover</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="permission-view-group">
+                    <h3>Notificações</h3>
+                    <div class="module-permissions">
+                        <h4>Alertas do Sistema</h4>
+                        <ul class="permission-list">
+                            <li class="permission-granted">Receber alertas de manutenção</li>
+                            <li class="permission-granted">Receber alertas de rota</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="permission-view-group">
+                    <h3>Acesso Cliente</h3>
+                    <div class="module-permissions">
+                        <h4>Monitoramento</h4>
+                        <ul class="permission-list">
+                            <li class="permission-granted">Visualizar rotas</li>
+                            <li class="permission-granted">Visualizar mapa</li>
+                            <li class="permission-granted">Visualizar status de entrega</li>
+                            <li class="permission-denied">Visualizar gráficos</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

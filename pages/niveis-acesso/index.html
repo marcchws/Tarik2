@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Níveis de Acesso - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <h1>Níveis de Acesso</h1>
+            <a href="novo.html" class="btn-primary">Novo Nível de Acesso</a>
+        </header>
+
+        <div class="filters-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    placeholder="Buscar por nome..."
+                    class="search-input"
+                >
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="status">Status:</label>
+                    <select id="status" class="filter-select">
+                        <option value="ativo" selected>Ativos</option>
+                        <option value="inativo">Inativos</option>
+                        <option value="todos">Todos</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Total de Permissões</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Administrador</td>
+                        <td>Acesso Total</td>
+                        <td><span class="status-badge active">Ativo</span></td>
+                        <td class="table-actions">
+                            <a href="visualizar.html" class="btn-icon" title="Visualizar">
+                                <i class="icon-eye"></i>
+                            </a>
+                            <a href="editar.html" class="btn-icon" title="Editar">
+                                <i class="icon-edit"></i>
+                            </a>
+                            <button class="btn-icon" title="Excluir">
+                                <i class="icon-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Operacional</td>
+                        <td>12 Permissões</td>
+                        <td><span class="status-badge active">Ativo</span></td>
+                        <td class="table-actions">
+                            <a href="visualizar.html" class="btn-icon" title="Visualizar">
+                                <i class="icon-eye"></i>
+                            </a>
+                            <a href="editar.html" class="btn-icon" title="Editar">
+                                <i class="icon-edit"></i>
+                            </a>
+                            <button class="btn-icon" title="Excluir">
+                                <i class="icon-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

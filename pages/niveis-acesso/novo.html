@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Nível de Acesso - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <h1>Novo Nível de Acesso</h1>
+            <a href="index.html" class="btn-secondary">Voltar</a>
+        </header>
+
+        <form class="form-container">
+            <section class="form-section">
+                <h2>Informações Básicas</h2>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="status">Status*</label>
+                        <select id="status" required>
+                            <option value="ativo" selected>Ativo</option>
+                            <option value="inativo">Inativo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nome">Nome do Nível*</label>
+                        <input type="text" id="nome" required>
+                    </div>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Permissões do Sistema</h2>
+                
+                <div class="permissions-group">
+                    <h3>Gestão de Usuários</h3>
+                    <div class="permission-item">
+                        <span class="module-name">Colaboradores</span>
+                        <div class="permission-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Visualizar
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Adicionar
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Editar
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Remover
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="permissions-group">
+                    <h3>Notificações</h3>
+                    <div class="permission-item">
+                        <span class="module-name">Alertas do Sistema</span>
+                        <div class="permission-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Receber alertas de manutenção
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Receber alertas de rota
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="permissions-group">
+                    <h3>Acesso Cliente</h3>
+                    <div class="permission-item">
+                        <span class="module-name">Monitoramento</span>
+                        <div class="permission-options">
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Visualizar rotas
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Visualizar mapa
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Visualizar status de entrega
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox">
+                                Visualizar gráficos
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Salvar</button>
+                <a href="index.html" class="btn-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
