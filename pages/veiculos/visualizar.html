@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Veículo - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="header-title">
+                <h1>AA 11 11 AA</h1>
+                <span class="status-badge available">Disponível</span>
+            </div>
+            <div class="header-actions">
+                <a href="editar.html" class="btn-primary">Editar</a>
+                <a href="index.html" class="btn-secondary">Voltar</a>
+            </div>
+        </header>
+
+        <div class="view-container">
+            <!-- Seção Principal -->
+            <section class="main-info-section">
+                <div class="vehicle-images">
+                    <div class="main-image">
+                        <img src="../../assets/truck-front.jpg" alt="Veículo">
+                    </div>
+                    <div class="thumbnail-list">
+                        <div class="thumbnail active">
+                            <img src="../../assets/truck-front.jpg" alt="Frente">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="../../assets/truck-side.jpg" alt="Lateral">
+                        </div>
+                        <div class="thumbnail">
+                            <img src="../../assets/truck-back.jpg" alt="Traseira">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vehicle-info">
+                    <div class="info-cards">
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="icon-truck"></i>
+                            </div>
+                            <div class="info-data">
+                                <span class="info-value">Volvo FH 460</span>
+                                <span class="info-label">Modelo</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="icon-calendar"></i>
+                            </div>
+                            <div class="info-data">
+                                <span class="info-value">2020</span>
+                                <span class="info-label">Ano</span>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <div class="info-icon">
+                                <i class="icon-gauge"></i>
+                            </div>
+                            <div class="info-data">
+                                <span class="info-value">150.000 km</span>
+                                <span class="info-label">Quilometragem</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Abas de Informação -->
+            <section class="info-tabs-section">
+                <div class="tabs-header">
+                    <button class="tab-btn active">Informações Gerais</button>
+                    <button class="tab-btn">Manutenções</button>
+                    <button class="tab-btn">Documentos</button>
+                    <button class="tab-btn">Rotas</button>
+                </div>
+
+                <!-- Conteúdo das Abas -->
+                <div class="tab-content active">
+                    <div class="info-grid">
+                        <div class="info-group">
+                            <h3>Especificações</h3>
+                            <div class="spec-list">
+                                <div class="spec-item">
+                                    <span class="spec-label">Tipo de Veículo</span>
+                                    <span class="spec-value">Caminhão Tanque</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Capacidade</span>
+                                    <span class="spec-value">30.000 L</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Tipo de Carga</span>
+                                    <span class="spec-value">Combustível, Inflamável</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Tipo de Combustível</span>
+                                    <span class="spec-value">Diesel</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="info-group">
+                            <h3>Motor</h3>
+                            <div class="spec-list">
+                                <div class="spec-item">
+                                    <span class="spec-label">Potência</span>
+                                    <span class="spec-value">460 cv</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Número de Eixos</span>
+                                    <span class="spec-value">6</span>
+                                </div>
+                                <div class="spec-item">
+                                    <span class="spec-label">Chassi</span>
+                                    <span class="spec-value">9BM123456789</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content">
+                    <div class="maintenance-timeline">
+                        <div class="timeline-header">
+                            <h3>Histórico de Manutenções</h3>
+                            <div class="maintenance-alert">
+                                <i class="icon-alert"></i>
+                                Próxima manutenção em 5 dias
+                            </div>
+                        </div>
+
+                        <div class="timeline-items">
+                            <div class="timeline-item">
+                                <div class="timeline-date">
+                                    <span class="date">15/01/2024</span>
+                                </div>
+                                <div class="timeline-content">
+                                    <h4>Manutenção Preventiva</h4>
+                                    <p>Troca de óleo e filtros</p>
+                                    <div class="timeline-details">
+                                        <span>KM: 145.000</span>
+                                        <span>Custo: AOA 150.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content">
+                    <div class="documents-grid">
+                        <div class="document-card">
+                            <div class="document-header">
+                                <i class="icon-doc"></i>
+                                <h4>Licença de Circulação</h4>
+                            </div>
+                            <div class="document-info">
+                                <div class="doc-data">
+                                    <span class="doc-label">Validade</span>
+                                    <span class="doc-value">15/12/2024</span>
+                                </div>
+                                <button class="btn-secondary">Visualizar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content">
+                    <div class="routes-list">
+                        <div class="route-card">
+                            <div class="route-header">
+                                <span class="route-date">28/01/2024</span>
+                                <span class="route-status">Em andamento</span>
+                            </div>
+                            <div class="route-body">
+                                <div class="route-points">
+                                    <div class="point">
+                                        <span class="point-label">Origem</span>
+                                        <span class="point-value">Base Luanda</span>
+                                    </div>
+                                    <div class="point">
+                                        <span class="point-label">Destino</span>
+                                        <span class="point-value">Cliente ABC</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

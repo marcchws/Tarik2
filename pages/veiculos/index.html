@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veículos - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="header-content">
+                <h1>Veículos</h1>
+                <div class="header-stats">
+                    <div class="stat-card">
+                        <span class="stat-value">28</span>
+                        <span class="stat-label">Veículos Disponíveis</span>
+                    </div>
+                    <div class="stat-card warning">
+                        <span class="stat-value">5</span>
+                        <span class="stat-label">Em Manutenção</span>
+                    </div>
+                    <div class="stat-card alert">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">Documentos a Vencer</span>
+                    </div>
+                </div>
+            </div>
+            <a href="novo.html" class="btn-primary">Novo Veículo</a>
+        </header>
+
+        <div class="filters-section">
+            <div class="search-group">
+                <div class="search-box">
+                    <i class="icon-license-plate"></i>
+                    <input type="text" placeholder="Buscar por placa..." class="search-input">
+                </div>
+                <div class="search-box">
+                    <i class="icon-truck"></i>
+                    <input type="text" placeholder="Buscar por tipo..." class="search-input">
+                </div>
+                <div class="search-box">
+                    <i class="icon-brand"></i>
+                    <input type="text" placeholder="Buscar por marca/modelo..." class="search-input">
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="status">Status:</label>
+                    <select id="status" class="filter-select">
+                        <option value="disponivel" selected>Disponíveis</option>
+                        <option value="manutencao">Em Manutenção</option>
+                        <option value="inativo">Inativos</option>
+                        <option value="todos">Todos</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="tipo-carga">Tipo de Carga:</label>
+                    <select id="tipo-carga" class="filter-select">
+                        <option value="">Todos</option>
+                        <option value="combustivel">Combustível</option>
+                        <option value="inflamavel">Inflamável</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="vehicles-grid">
+            <div class="vehicle-card">
+                <div class="vehicle-image">
+                    <img src="../../assets/truck-placeholder.jpg" alt="Caminhão">
+                    <span class="status-badge available">Disponível</span>
+                </div>
+                <div class="vehicle-info">
+                    <h3 class="vehicle-plate">AA 11 11 AA</h3>
+                    <div class="info-row">
+                        <i class="icon-truck"></i>
+                        <span>Caminhão Tanque</span>
+                    </div>
+                    <div class="info-row">
+                        <i class="icon-brand"></i>
+                        <span>Volvo FH 460</span>
+                    </div>
+                    <div class="info-row">
+                        <i class="icon-gauge"></i>
+                        <span>150.000 km</span>
+                    </div>
+                </div>
+                <div class="vehicle-alerts">
+                    <div class="alert-item warning">
+                        <i class="icon-wrench"></i>
+                        <span>Manutenção em 5 dias</span>
+                    </div>
+                    <div class="alert-item info">
+                        <i class="icon-route"></i>
+                        <span>2 rotas agendadas</span>
+                    </div>
+                </div>
+                <div class="vehicle-actions">
+                    <a href="visualizar.html" class="btn-icon" title="Visualizar">
+                        <i class="icon-eye"></i>
+                    </a>
+                    <a href="editar.html" class="btn-icon" title="Editar">
+                        <i class="icon-edit"></i>
+                    </a>
+                    <button class="btn-icon" title="Excluir">
+                        <i class="icon-trash"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mais cards de veículos... -->
+        </div>
+
+        <div class="pagination">
+            <button class="btn-page" disabled>&laquo; Anterior</button>
+            <div class="page-numbers">
+                <button class="btn-page active">1</button>
+                <button class="btn-page">2</button>
+                <button class="btn-page">3</button>
+            </div>
+            <button class="btn-page">Próxima &raquo;</button>
+        </div>
+    </div>
+</body>
+</html>
