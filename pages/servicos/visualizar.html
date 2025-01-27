@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Serviço - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="header-content">
+                <div class="header-top">
+                    <h1>Detalhes do Serviço</h1>
+                    <div class="header-actions">
+                        <a href="editar.html" class="btn-primary">Editar</a>
+                        <button class="btn-secondary">Voltar</button>
+                    </div>
+                </div>
+                <div class="service-status-bar">
+                    <div class="status-info">
+                        <span class="status-badge active">Ativo</span>
+                        <span class="service-id">#SRV-001</span>
+                    </div>
+                    <div class="last-update">
+                        Última atualização: 23/01/2025
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="details-grid">
+            <div class="detail-card">
+                <h2>Informações Básicas</h2>
+                <div class="detail-content">
+                    <div class="detail-row">
+                        <span class="detail-label">Nome do Serviço</span>
+                        <span class="detail-value">Luanda - Lucala</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Tipo de Tarifa</span>
+                        <span class="detail-value">Variável por KM</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">Valor</span>
+                        <span class="detail-value highlight">69 Kz/Km × m³</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <h2>Rota</h2>
+                <div class="route-info">
+                    <div class="route-point">
+                        <i class="icon-location"></i>
+                        <div class="point-details">
+                            <span class="point-label">Origem</span>
+                            <span class="point-value">Luanda</span>
+                        </div>
+                    </div>
+                    <div class="route-line">
+                        <span class="distance">246 KM</span>
+                    </div>
+                    <div class="route-point">
+                        <i class="icon-location"></i>
+                        <div class="point-details">
+                            <span class="point-label">Destino</span>
+                            <span class="point-value">Lucala</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <h2>Histórico de Utilização</h2>
+                <div class="usage-chart">
+                    <!-- Gráfico seria inserido aqui -->
+                    <div class="chart-placeholder">
+                        Gráfico de Utilização
+                    </div>
+                </div>
+                <div class="usage-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">42</span>
+                        <span class="stat-label">Viagens no Mês</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">98%</span>
+                        <span class="stat-label">Taxa de Sucesso</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">169.740 Kz</span>
+                        <span class="stat-label">Média/Viagem</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="detail-card">
+                <h2>Requisitos</h2>
+                <div class="requirements-grid">
+                    <div class="requirement-item">
+                        <i class="icon-truck"></i>
+                        <div class="requirement-info">
+                            <span class="requirement-label">Tipo de Veículo</span>
+                            <span class="requirement-value">Caminhão Tanque</span>
+                        </div>
+                    </div>
+                    <div class="requirement-item">
+                        <i class="icon-cargo"></i>
+                        <div class="requirement-info">
+                            <span class="requirement-label">Tipo de Carga</span>
+                            <span class="requirement-value">Combustível Líquido</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

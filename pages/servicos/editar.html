@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Serviço - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="header-content">
+                <h1>Editar Serviço</h1>
+                <div class="service-preview">
+                    <div class="preview-box">
+                        <span class="preview-label">Código do Serviço</span>
+                        <span class="preview-value">#SRV-001</span>
+                    </div>
+                    <div class="preview-box">
+                        <span class="preview-label">Última Atualização</span>
+                        <span class="preview-value">23/01/2025</span>
+                    </div>
+                    <div class="preview-box highlight">
+                        <span class="preview-label">Status Atual</span>
+                        <span class="preview-value">Ativo</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="form-container">
+            <form class="service-form">
+                <div class="form-grid">
+                    <div class="form-section">
+                        <h2>Informações Básicas</h2>
+                        <div class="form-group">
+                            <label for="name">Nome do Serviço*</label>
+                            <input type="text" id="name" value="Luanda - Lucala" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status*</label>
+                            <div class="toggle-group">
+                                <input type="radio" id="status-active" name="status" value="active" checked>
+                                <label for="status-active" class="toggle-button">Ativo</label>
+                                <input type="radio" id="status-inactive" name="status" value="inactive">
+                                <label for="status-inactive" class="toggle-button">Inativo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Histórico</h2>
+                        <div class="history-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">23/01/2025</div>
+                                <div class="timeline-content">
+                                    <strong>Atualização de Tarifa</strong>
+                                    <p>Valor ajustado de 65 Kz para 69 Kz</p>
+                                </div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">15/01/2025</div>
+                                <div class="timeline-content">
+                                    <strong>Criação do Serviço</strong>
+                                    <p>Serviço cadastrado no sistema</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Rota e Valores</h2>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="origin">Origem*</label>
+                                <select id="origin" required>
+                                    <option value="luanda" selected>Luanda</option>
+                                    <option value="benguela">Benguela</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="destination">Destino*</label>
+                                <select id="destination" required>
+                                    <option value="lucala" selected>Lucala</option>
+                                    <option value="malanje">Malanje</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="value">Valor por KM (Kz)*</label>
+                            <div class="input-group">
+                                <input type="number" id="value" value="69" required>
+                                <span class="input-suffix">Kz/Km × m³</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Métricas</h2>
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <span class="metric-value">42</span>
+                                <span class="metric-label">Viagens Realizadas</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-value">98%</span>
+                                <span class="metric-label">Taxa de Sucesso</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-value">169.740 Kz</span>
+                                <span class="metric-label">Faturamento Médio</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="history.back()">Cancelar</button>
+                    <button type="submit" class="btn-primary">Salvar Alterações</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

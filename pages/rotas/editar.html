@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Rota - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="header-content">
+                <h1>Editar Rota</h1>
+                <div class="route-status-bar">
+                    <div class="status-group">
+                        <span class="status-label">Rota #RT001</span>
+                        <span class="status-badge in-progress">Em Andamento</span>
+                    </div>
+                    <div class="progress-tracker">
+                        <div class="progress-step completed">
+                            <i class="icon-check"></i>
+                            <span>Saída</span>
+                            <small>08:00</small>
+                        </div>
+                        <div class="progress-line completed"></div>
+                        <div class="progress-step active">
+                            <i class="icon-truck"></i>
+                            <span>Em Trânsito</span>
+                            <small>2/3 entregas</small>
+                        </div>
+                        <div class="progress-line"></div>
+                        <div class="progress-step">
+                            <i class="icon-flag"></i>
+                            <span>Chegada</span>
+                            <small>Previsto: 11:45</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="route-editor">
+            <!-- Coluna do Mapa -->
+            <div class="map-section">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        Mapa Interativo
+                    </div>
+                    <div class="map-overlay">
+                        <div class="weather-widget">
+                            <div class="weather-info">
+                                <i class="icon-sun"></i>
+                                <span>32°C</span>
+                            </div>
+                            <div class="road-conditions">
+                                <span class="condition good">Estrada Boa</span>
+                                <span class="condition warning">Tráfego Moderado</span>
+                            </div>
+                        </div>
+                        <div class="real-time-metrics">
+                            <div class="metric">
+                                <span class="metric-label">Velocidade Média</span>
+                                <span class="metric-value">65 km/h</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">Tempo Restante</span>
+                                <span class="metric-value">1h 15min</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-tools">
+                    <button class="btn-tool">
+                        <i class="icon-route"></i>
+                        Recalcular Rota
+                    </button>
+                    <button class="btn-tool">
+                        <i class="icon-warning"></i>
+                        Reportar Problema
+                    </button>
+                    <button class="btn-tool">
+                        <i class="icon-share"></i>
+                        Compartilhar Rota
+                    </button>
+                </div>
+            </div>
+
+            <!-- Painel de Edição -->
+            <div class="edit-panel">
+                <div class="panel-section">
+                    <h2>Informações do Pedido</h2>
+                    <div class="order-info">
+                        <div class="order-header">
+                            <a href="../pedidos/visualizar.html" class="order-link">#PD001</a>
+                            <span class="order-priority high">Alta Prioridade</span>
+                        </div>
+                        <div class="order-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Cliente</span>
+                                <span class="detail-value">Sonangol Distribuidora</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Carga</span>
+                                <span class="detail-value">15.000L - Combustível</span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Prazo</span>
+                                <span class="detail-value">28/01/2025</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h2>Pontos de Entrega</h2>
+                    <div class="delivery-points">
+                        <div class="point-item completed">
+                            <div class="point-status">
+                                <i class="icon-check"></i>
+                            </div>
+                            <div class="point-info">
+                                <strong>Posto Sonangol - Centro</strong>
+                                <span>Entregue às 09:15</span>
+                            </div>
+                            <button class="btn-edit-point">
+                                <i class="icon-edit"></i>
+                            </button>
+                        </div>
+
+                        <div class="point-item active">
+                            <div class="point-status">
+                                <i class="icon-truck"></i>
+                            </div>
+                            <div class="point-info">
+                                <strong>Posto Sonangol - Norte</strong>
+                                <span>Chegada prevista: 10:30</span>
+                            </div>
+                            <button class="btn-edit-point">
+                                <i class="icon-edit"></i>
+                            </button>
+                        </div>
+
+                        <div class="point-item">
+                            <div class="point-status">
+                                <i class="icon-clock"></i>
+                            </div>
+                            <div class="point-info">
+                                <strong>Base Lucala</strong>
+                                <span>Chegada prevista: 11:45</span>
+                            </div>
+                            <button class="btn-edit-point">
+                                <i class="icon-edit"></i>
+                            </button>
+                        </div>
+
+                        <button class="btn-add-point">
+                            <i class="icon-plus"></i>
+                            Adicionar Ponto
+                        </button>
+                    </div>
+                </div>
+
+                <div class="panel-section">
+                    <h2>Recursos Alocados</h2>
+                    <div class="resources-grid">
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="icon-truck"></i>
+                            </div>
+                            <div class="resource-info">
+                                <span class="resource-label">Veículo</span>
+                                <strong>CT-001</strong>
+                                <span>Tanque 15.000L</span>
+                            </div>
+                            <button class="btn-change-resource">
+                                Alterar
+                            </button>
+                        </div>
+
+                        <div class="resource-card">
+                            <div class="resource-icon">
+                                <i class="icon-user"></i>
+                            </div>
+                            <div class="resource-info">
+                                <span class="resource-label">Motorista</span>
+                                <strong>João Silva</strong>
+                                <span>Experiência: 5 anos</span>
+                            </div>
+                            <button class="btn-change-resource">
+                                Alterar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="history.back()">Cancelar</button>
+                    <button type="submit" class="btn-primary">Salvar Alterações</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

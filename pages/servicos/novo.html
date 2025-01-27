@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novo Serviço - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="header-content">
+                <h1>Novo Serviço</h1>
+                <div class="service-preview">
+                    <div class="preview-box">
+                        <span class="preview-label">Valor por KM</span>
+                        <span class="preview-value">69 Kz/Km × m³</span>
+                    </div>
+                    <div class="preview-box">
+                        <span class="preview-label">Distância Total</span>
+                        <span class="preview-value">246 KM</span>
+                    </div>
+                    <div class="preview-box highlight">
+                        <span class="preview-label">Valor Estimado</span>
+                        <span class="preview-value">169.740 Kz</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="form-container">
+            <form class="service-form">
+                <div class="form-grid">
+                    <div class="form-section">
+                        <h2>Informações Básicas</h2>
+                        <div class="form-group">
+                            <label for="name">Nome do Serviço*</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="status">Status*</label>
+                            <div class="toggle-group">
+                                <input type="radio" id="status-active" name="status" value="active" checked>
+                                <label for="status-active" class="toggle-button">Ativo</label>
+                                <input type="radio" id="status-inactive" name="status" value="inactive">
+                                <label for="status-inactive" class="toggle-button">Inativo</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Tipo de Tarifa</h2>
+                        <div class="form-group">
+                            <div class="tariff-options">
+                                <div class="tariff-card">
+                                    <input type="radio" id="tariff-variable" name="tariffType" value="variable">
+                                    <label for="tariff-variable">
+                                        <i class="icon-route"></i>
+                                        <span>Variável por KM</span>
+                                        <small>Valor calculado por KM e quantidade</small>
+                                    </label>
+                                </div>
+                                <div class="tariff-card">
+                                    <input type="radio" id="tariff-fixed" name="tariffType" value="fixed">
+                                    <label for="tariff-fixed">
+                                        <i class="icon-money"></i>
+                                        <span>Tarifa Fixa</span>
+                                        <small>Valor fixo independente da distância</small>
+                                    </label>
+                                </div>
+                                <div class="tariff-card">
+                                    <input type="radio" id="tariff-quantity" name="tariffType" value="quantity">
+                                    <label for="tariff-quantity">
+                                        <i class="icon-box"></i>
+                                        <span>Por Quantidade</span>
+                                        <small>Valor fixo por unidade transportada</small>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Rota e Valores</h2>
+                        <div class="form-group">
+                            <label for="origin">Origem*</label>
+                            <select id="origin" required>
+                                <option value="luanda">Luanda</option>
+                                <option value="benguela">Benguela</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destino*</label>
+                            <select id="destination" required>
+                                <option value="lucala">Lucala</option>
+                                <option value="malanje">Malanje</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="value">Valor por KM (Kz)*</label>
+                            <div class="input-group">
+                                <input type="number" id="value" required>
+                                <span class="input-suffix">Kz/Km × m³</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h2>Requisitos</h2>
+                        <div class="form-group">
+                            <label for="vehicleType">Tipo de Veículo*</label>
+                            <select id="vehicleType" required>
+                                <option value="tank">Caminhão Tanque</option>
+                                <option value="cargo">Caminhão de Carga</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cargoType">Tipo de Carga*</label>
+                            <select id="cargoType" required>
+                                <option value="fuel">Combustível Líquido</option>
+                                <option value="general">Carga Geral</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="history.back()">Cancelar</button>
+                    <button type="submit" class="btn-primary">Salvar Serviço</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

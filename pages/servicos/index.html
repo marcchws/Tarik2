@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="header-content">
+                <h1>Serviços</h1>
+                <div class="header-stats">
+                    <div class="stat-card">
+                        <span class="stat-value">28</span>
+                        <span class="stat-label">Serviços Ativos</span>
+                    </div>
+                    <div class="stat-card success">
+                        <span class="stat-value">85%</span>
+                        <span class="stat-label">Taxa de Utilização</span>
+                    </div>
+                    <div class="stat-card warning">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">Pendentes de Revisão</span>
+                    </div>
+                </div>
+            </div>
+            <a href="novo.html" class="btn-primary">Novo Serviço</a>
+        </header>
+
+        <div class="filters-section">
+            <div class="search-group">
+                <div class="search-box">
+                    <i class="icon-search"></i>
+                    <input 
+                        type="text" 
+                        placeholder="Buscar por nome do serviço..."
+                        class="search-input"
+                    >
+                </div>
+                <div class="search-box">
+                    <i class="icon-route"></i>
+                    <input 
+                        type="text" 
+                        placeholder="Buscar por rota..."
+                        class="search-input"
+                    >
+                </div>
+                <div class="search-box">
+                    <i class="icon-truck"></i>
+                    <input 
+                        type="text" 
+                        placeholder="Buscar por tipo de veículo..."
+                        class="search-input"
+                    >
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="status">Status:</label>
+                    <select id="status" class="filter-select">
+                        <option value="ativo" selected>Ativos</option>
+                        <option value="inativo">Inativos</option>
+                        <option value="todos">Todos</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="tariffType">Tipo de Tarifa:</label>
+                    <select id="tariffType" class="filter-select">
+                        <option value="todos" selected>Todos</option>
+                        <option value="variavel">Variável por KM</option>
+                        <option value="fixa">Fixa</option>
+                        <option value="quantidade">Por Quantidade</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-header">
+                    <div class="service-type">
+                        <i class="icon-route"></i>
+                        <span>Variável por KM</span>
+                    </div>
+                    <div class="service-status active">Ativo</div>
+                </div>
+                <div class="service-info">
+                    <h3 class="service-name">Luanda - Lucala</h3>
+                    <div class="info-row">
+                        <i class="icon-truck"></i>
+                        <span>Caminhão Tanque</span>
+                    </div>
+                    <div class="info-row">
+                        <i class="icon-cargo"></i>
+                        <span>Combustível Líquido</span>
+                    </div>
+                    <div class="info-row highlight">
+                        <i class="icon-money"></i>
+                        <span>69 Kz/Km × m³</span>
+                    </div>
+                    <div class="info-row">
+                        <i class="icon-distance"></i>
+                        <span>246 KM</span>
+                    </div>
+                </div>
+                <div class="service-stats">
+                    <div class="stat-item">
+                        <span class="stat-label">Viagens/Mês</span>
+                        <span class="stat-value">42</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">Faturamento</span>
+                        <span class="stat-value">169.740 Kz</span>
+                    </div>
+                </div>
+                <div class="service-actions">
+                    <a href="visualizar.html" class="btn-icon" title="Visualizar">
+                        <i class="icon-eye"></i>
+                    </a>
+                    <a href="editar.html" class="btn-icon" title="Editar">
+                        <i class="icon-edit"></i>
+                    </a>
+                    <button class="btn-icon" title="Excluir">
+                        <i class="icon-trash"></i>
+                    </button>
+                </div>
+            </div>
+            <!-- Mais cards de serviços... -->
+        </div>
+
+        <div class="pagination">
+            <button class="btn-page" disabled>&laquo; Anterior</button>
+            <div class="page-numbers">
+                <button class="btn-page active">1</button>
+                <button class="btn-page">2</button>
+                <button class="btn-page">3</button>
+            </div>
+            <button class="btn-page">Próxima &raquo;</button>
+        </div>
+    </div>
+</body>
+</html>

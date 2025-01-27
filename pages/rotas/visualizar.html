@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes da Rota - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <div class="header-content">
+                <div class="header-top">
+                    <h1>Detalhes da Rota #RT001</h1>
+                    <div class="header-actions">
+                        <a href="editar.html" class="btn-primary">Editar Rota</a>
+                        <button class="btn-secondary">Voltar</button>
+                    </div>
+                </div>
+                
+                <div class="route-stats">
+                    <div class="stat-box">
+                        <span class="stat-value">246 KM</span>
+                        <span class="stat-label">Distância Total</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">3h 45min</span>
+                        <span class="stat-label">Tempo Total</span>
+                    </div>
+                    <div class="stat-box warning">
+                        <span class="stat-value">15 min</span>
+                        <span class="stat-label">Atraso</span>
+                    </div>
+                    <div class="stat-box success">
+                        <span class="stat-value">2/3</span>
+                        <span class="stat-label">Entregas Realizadas</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="route-dashboard">
+            <!-- Seção Principal com Mapa e Timeline -->
+            <div class="main-section">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        Mapa Interativo
+                    </div>
+                    <div class="live-tracking">
+                        <div class="tracking-header">
+                            <i class="icon-signal"></i>
+                            <span>Rastreamento em Tempo Real</span>
+                        </div>
+                        <div class="vehicle-info">
+                            <img src="../../assets/truck-icon.png" alt="Caminhão" class="vehicle-icon">
+                            <div class="info-group">
+                                <span class="vehicle-id">CT-001</span>
+                                <span class="driver-name">João Silva</span>
+                            </div>
+                            <div class="status-group">
+                                <span class="status-dot active"></span>
+                                <span>Em movimento</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-section">
+                    <h2>Linha do Tempo</h2>
+                    <div class="route-timeline">
+                        <div class="timeline-event completed">
+                            <div class="event-time">08:00</div>
+                            <div class="event-marker">
+                                <i class="icon-start"></i>
+                            </div>
+                            <div class="event-content">
+                                <h3>Saída da Base</h3>
+                                <p>Luanda - Início do percurso</p>
+                                <div class="event-meta">
+                                    <span class="meta-item">
+                                        <i class="icon-temperature"></i>
+                                        28°C
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="icon-fuel"></i>
+                                        Tanque Cheio
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-event completed">
+                            <div class="event-time">09:15</div>
+                            <div class="event-marker">
+                                <i class="icon-delivery"></i>
+                            </div>
+                            <div class="event-content">
+                                <h3>Entrega Realizada</h3>
+                                <p>Posto Sonangol - Centro</p>
+                                <div class="delivery-details">
+                                    <span>5.000L entregues</span>
+                                    <span>Sem ocorrências</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-event active">
+                            <div class="event-time">10:30</div>
+                            <div class="event-marker">
+                                <i class="icon-truck"></i>
+                            </div>
+                            <div class="event-content">
+                                <h3>Em Trânsito</h3>
+                                <p>A caminho do Posto Sonangol - Norte</p>
+                                <div class="event-meta">
+                                    <span class="meta-item">
+                                        <i class="icon-speed"></i>
+                                        65 km/h
+                                    </span>
+                                    <span class="meta-item warning">
+                                        <i class="icon-clock"></i>
+                                        15min de atraso
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-event">
+                            <div class="event-time">11:45</div>
+                            <div class="event-marker">
+                                <i class="icon-flag"></i>
+                            </div>
+                            <div class="event-content">
+                                <h3>Chegada Prevista</h3>
+                                <p>Base Lucala</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Painel Lateral -->
+            <div class="side-panel">
+                <!-- Informações do Pedido -->
+                <div class="panel-section">
+                    <h2>Informações do Pedido</h2>
+                    <div class="order-card">
+                        <div class="order-header">
+                            <a href="../pedidos/visualizar.html" class="order-id">#PD001</a>
+                            <span class="order-status">Em Andamento</span>
+                        </div>
+                        <div class="order-content">
+                            <div class="client-info">
+                                <img src="../../assets/client-logo.png" alt="Logo Cliente" class="client-logo">
+                                <div class="client-details">
+                                    <strong>Sonangol Distribuidora</strong>
+                                    <span>Cliente Premium</span>
+                                </div>
+                            </div>
+                            <div class="order-details">
+                                <div class="detail-item">
+                                    <i class="icon-box"></i>
+                                    <span>15.000L - Combustível</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="icon-calendar"></i>
+                                    <span>Prazo: 28/01/2025</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Métricas -->
+                <div class="panel-section">
+                    <h2>Métricas da Rota</h2>
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-chart">
+                                <!-- Gráfico de Velocidade Média -->
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value">65 km/h</span>
+                                <span class="metric-label">Velocidade Média</span>
+                            </div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-chart">
+                                <!-- Gráfico de Consumo -->
+                            </div>
+                            <div class="metric-info">
+                                <span class="metric-value">45L</span>
+                                <span class="metric-label">Consumo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ocorrências -->
+                <div class="panel-section">
+                    <h2>Ocorrências</h2>
+                    <div class="occurrences-list">
+                        <div class="occurrence-item warning">
+                            <div class="occurrence-icon">
+                                <i class="icon-warning"></i>
+                            </div>
+                            <div class="occurrence-info">
+                                <strong>Atraso na Entrega</strong>
+                                <p>Tráfego intenso na via principal</p>
+                                <span class="occurrence-time">09:45</span>
+                            </div>
+                        </div>
+                        <div class="occurrence-item info">
+                            <div class="occurrence-icon">
+                                <i class="icon-info"></i>
+                            </div>
+                            <div class="occurrence-info">
+                                <strong>Parada para Abastecimento</strong>
+                                <p>Realizado conforme programado</p>
+                                <span class="occurrence-time">08:30</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
