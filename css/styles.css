@@ -1104,3 +1104,47 @@ small {
         min-width: auto;
     }
 }
+
+/* Estilos para visualização em grid */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.info-item.full-width {
+    grid-column: 1 / -1;
+}
+
+.info-text {
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Estilos para o grupo de senha */
+.password-group {
+    display: flex;
+    gap: 10px;
+}
+
+.password-group input {
+    flex: 1;
+}
+
+/* Estilos para três colunas */
+.form-row.three-columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .form-row.three-columns {
+        grid-template-columns: 1fr;
+    }
+    
+    .password-group {
+        flex-direction: column;
+    }
+}

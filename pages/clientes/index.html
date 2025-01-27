@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes - Sistema de Gestão de Frotas</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="page-container">
+        <header class="page-header">
+            <h1>Clientes</h1>
+            <a href="novo.html" class="btn-primary">Novo Cliente</a>
+        </header>
+
+        <div class="filters-section">
+            <div class="search-group">
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        placeholder="Buscar por razão social..."
+                        class="search-input"
+                    >
+                </div>
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        placeholder="Buscar por documento..."
+                        class="search-input"
+                    >
+                </div>
+                <div class="search-box">
+                    <input 
+                        type="text" 
+                        placeholder="Buscar por responsável..."
+                        class="search-input"
+                    >
+                </div>
+            </div>
+
+            <div class="filters">
+                <div class="filter-group">
+                    <label for="status">Status:</label>
+                    <select id="status" class="filter-select">
+                        <option value="ativo" selected>Ativos</option>
+                        <option value="inativo">Inativos</option>
+                        <option value="todos">Todos</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="table-container">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome Social</th>
+                        <th>Nome Comercial</th>
+                        <th>Documento</th>
+                        <th>Responsável</th>
+                        <th>Telefone</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Empresa ABC Ltda</td>
+                        <td>ABC Comércio</td>
+                        <td>NIF: 5543219876</td>
+                        <td>João Silva</td>
+                        <td>+244 923 456 789</td>
+                        <td><span class="status-badge active">Ativo</span></td>
+                        <td class="table-actions">
+                            <a href="visualizar.html" class="btn-icon" title="Visualizar">
+                                <i class="icon-eye"></i>
+                            </a>
+                            <a href="editar.html" class="btn-icon" title="Editar">
+                                <i class="icon-edit"></i>
+                            </a>
+                            <button class="btn-icon" title="Excluir">
+                                <i class="icon-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="pagination">
+            <button class="btn-page" disabled>&laquo; Anterior</button>
+            <div class="page-numbers">
+                <button class="btn-page active">1</button>
+                <button class="btn-page">2</button>
+                <button class="btn-page">3</button>
+            </div>
+            <button class="btn-page">Próxima &raquo;</button>
+        </div>
+    </div>
+</body>
+</html>
